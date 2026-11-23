@@ -140,10 +140,10 @@ strong { font-weight: 600; }
 
 /* ---------- header ---------- */
 .site-header { border-bottom: 1px solid var(--rule); background: var(--paper); }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 96px; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 84px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
 .brand:hover { color: var(--ink); }
-.brand-mark { width: auto; height: 76px; flex: none; image-rendering: pixelated; }
+.brand-mark { width: auto; height: 61px; flex: none; image-rendering: pixelated; }
 .brand-name { font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: -0.005em; }
 .site-nav ul { display: flex; gap: clamp(14px, 3vw, 32px); list-style: none; margin: 0; padding: 0; }
 .site-nav a { display: inline-block; padding: 6px 0; font-size: 15px; font-weight: 500; color: var(--ink-2); text-decoration: none; border-bottom: 2px solid transparent; }
@@ -479,4 +479,4 @@ tbody tr:last-child td { border-bottom: 0; }
   .about-me-text p { font-size: 17px; }
 }
 
-@media (max-width: 560px) { .brand-mark { height: 57px; } }
+@media (max-width: 560px) { .brand-mark { height: 46px; } }
