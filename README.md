@@ -9,11 +9,11 @@ Live at https://russayz.github.io (pages carry a `noindex` tag, so search engine
 |---|---|
 | `index.html` | Home page |
 | `research/` | Research list and one folder per pitch |
-| `track-record/` | Portfolio performance, percentages only |
+| `track-record/` | My Portfolio page: performance, percentages only |
 | `about/` | Background, experience, competitions, contact |
 | `files/` | Pitch decks (PDF) |
 | `assets/css/site.css` | All styles |
-| `assets/js/performance-data.js` | Track record numbers (edit this to update the chart) |
+| `assets/js/performance-data.js` | My Portfolio numbers (edit this to update the chart) |
 | `assets/js/charts.js` | Chart drawing code |
 | `assets/img/`, `assets/fonts/` | Images and self-hosted fonts (Newsreader, IBM Plex Sans, both under the SIL Open Font License) |
 

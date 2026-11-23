@@ -31,19 +31,19 @@ Open the folder on github.com (for example `files`), click **Add file > Upload f
 
 | What you see on the site | File to edit |
 |---|---|
-| Home page: name, intro, buttons, quick facts, track record panel, research cards, short bio | `index.html` |
+| Home page: name, intro, buttons, quick facts, My Portfolio panel, research cards, short bio | `index.html` |
 | Research list and the "At a glance" table | `research/index.html` |
 | FTAI pitch page | `research/ftai-aviation/index.html` |
 | Boot Barn pitch page | `research/boot-barn/index.html` |
 | DISCO pitch page | `research/disco/index.html` |
-| Track record page: stats, contributors, notes | `track-record/index.html` |
+| My Portfolio page: stats, contributors, notes (the web address stays /track-record/) | `track-record/index.html` |
 | Chart numbers (portfolio and benchmarks) | `assets/js/performance-data.js` |
 | About page: experience, education, competitions, contact | `about/index.html` |
 | Pitch decks | `files/` |
 | Slide images and the link-preview image | `assets/img/` |
 | Colors, fonts, spacing | `assets/css/site.css` |
 
-Notes in the files that look like `<!-- ===== TRACK RECORD PANEL ... ===== -->` are signposts for you.
+Notes in the files that look like `<!-- ===== MY PORTFOLIO PANEL ... ===== -->` are signposts for you.
 Visitors never see them.
 
 ---
@@ -65,7 +65,7 @@ Visitors never see them.
 
 ## Common jobs
 
-### 1. Update the track record each month
+### 1. Update My Portfolio each month
 Do all three steps so the numbers agree everywhere.
 
 **a. Chart data: `assets/js/performance-data.js`**
@@ -75,11 +75,11 @@ Do all three steps so the numbers agree everywhere.
   - Example: old 84.64, November +2.0% → 1.8464 × 1.02 − 1 = 0.8833 → **88.33**.
 - Update `asOf` and the `reported` figures.
 
-**b. Home page: `index.html`**, in the TRACK RECORD PANEL block
+**b. Home page: `index.html`**, in the MY PORTFOLIO PANEL block
 - The big number, "May 2024 to Oct 2026", the two legend values, the four risk stats (Sharpe, drawdown, best and worst month), and the sentence inside `<noscript>`.
 
-**c. Track record page: `track-record/index.html`**
-- The opening paragraph (return and lead over the S&P 500), the eight STATS, the chart subtitle ("Month-end values, May 2024 to ..."), the contributors if they changed, and the notes at the bottom.
+**c. My Portfolio page: `track-record/index.html`**
+- The opening paragraph (return and lead over the S&P 500), the ten STATS (including Sortino ratio and average holding duration), the chart subtitle ("Month-end values, May 2024 to ..."), the contributors if they changed, and the notes at the bottom.
 - Contributor bars: each `width: 100.0%` is that holding's contribution divided by the largest contribution on the page, times 100. For example 7.13 ÷ 8.28 × 100 = 86.1%.
 
 Never add account values or dollar balances. The site shows percentages only.

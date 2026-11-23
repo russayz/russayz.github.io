@@ -1,17 +1,15 @@
 /*
-  Track record data. Percentages only: no account values are stored or shown.
+  My Portfolio data. Percentages only: no account values are stored or shown.
 
-  Source: brokerage performance report, May 2024 to Oct 2026.
-  - "reported" figures are copied exactly from the report.
-  - "series" values are cumulative returns in percent at each month end,
-    read from the report's chart, then reconciled to the reported figures.
-    Benchmark paths are approximate.
+  Source: brokerage performance report (PortfolioAnalyst), 27 May 2024 to 29 Oct 2026.
+  Every figure is copied from the report. "series" values are the report's cumulative
+  time-weighted returns in percent at each month end (Benchmark Performance Comparisons table).
 
   To update: add one month to "months" and one value to each series,
   then refresh "reported" and "asOf".
 */
 window.TRACK_RECORD = {
-  asOf: "31 Oct 2026",
+  asOf: "29 Oct 2026",
   inception: "May 2024",
   months: [
     "2024-05","2024-06","2024-07","2024-08","2024-09","2024-10","2024-11","2024-12",
@@ -24,25 +22,25 @@ window.TRACK_RECORD = {
       id: "portfolio",
       name: "My portfolio",
       short: "Portfolio",
-      values: [0.0,1.05,0.39,1.55,4.03,4.86,4.7,13.81,19.45,17.79,15.62,19.45,27.73,32.38,30.22,29.72,37.35,39.83,38.18,37.85,44.48,49.12,44.69,53.92,56.08,57.9,66.3,82.81,87.6,84.64]
+      values: [-0.41,1.03,0.57,1.53,3.98,4.94,4.62,13.86,19.51,17.71,15.67,19.52,27.66,32.39,30.27,29.56,37.17,39.9,38.18,37.63,44.45,49.1,44.66,53.94,56.11,57.73,66.3,82.81,87.59,84.64]
     },
     {
       id: "spx",
       name: "S&P 500 (total return)",
       short: "S&P 500",
-      values: [0.0,3.2,4.36,6.85,9.17,8.18,14.48,11.82,14.97,13.48,7.18,8.0,14.48,18.78,21.44,23.92,28.4,31.38,31.71,31.71,33.7,32.71,26.41,39.17,45.64,45.14,44.23,48.62,48.62,49.94]
+      values: [-0.49,3.08,4.33,6.86,9.15,8.16,14.51,11.78,14.89,13.39,7,6.27,12.96,18.71,21.37,23.83,28.35,31.36,31.68,31.76,33.67,32.66,26.05,39.28,46.61,45.21,45.12,49.07,48.55,49.98]
     },
     {
       id: "vt",
       name: "World equities (VT)",
       short: "VT",
-      values: [0.0,1.05,2.87,5.52,7.85,5.86,9.83,6.52,9.83,9.5,5.52,6.02,12.15,17.46,18.78,22.43,26.41,29.06,29.39,30.72,34.7,36.69,28.56,40.5,46.8,46.13,45.14,49.45,47.29,47.62]
+      values: [-0.49,1.09,3.09,5.5,7.81,5.46,9.83,6.6,9.86,9.4,5.56,6.15,12.31,17.56,18.85,22.37,26.49,29.05,29.33,30.51,34.57,36.78,28.28,40.23,46.65,46.08,45.07,49.43,47.3,47.41]
     },
     {
       id: "efa",
       name: "Developed ex-US (EFA)",
       short: "EFA",
-      values: [0.0,-1.6,1.55,4.2,5.19,-0.44,-0.77,-3.76,0.88,3.7,4.03,7.85,13.31,15.8,13.31,18.45,20.94,22.27,23.26,26.74,32.71,38.84,28.73,35.03,38.01,39.17,41.33,43.98,39.17,39.83]
+      values: [0.16,-1.65,0.9,4.19,5,-0.53,-0.85,-3.77,0.85,3.83,4.02,7.86,13.03,15.73,13.31,18.44,20.88,22.34,23.24,26.59,32.8,38.92,28.04,34.88,38.15,39.09,41.37,43.87,39.11,39.72]
     }
   ],
   reported: {
@@ -53,6 +51,7 @@ window.TRACK_RECORD = {
     worstMonth: { value: -2.97, period: "Mar 2026" },
     maxDrawdown: { value: -3.21, period: "Jan to Mar 2025" },
     sharpe: { value: 1.87 },
+    sortino: { value: 5.97 },
     stdDev: { value: 3.28 }
   },
   contributors: {
