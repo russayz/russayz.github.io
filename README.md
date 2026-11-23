@@ -17,6 +17,10 @@ Live at https://russayz.github.io (pages carry a `noindex` tag, so search engine
 | `assets/js/charts.js` | Chart drawing code |
 | `assets/img/`, `assets/fonts/` | Images and self-hosted fonts (Newsreader, IBM Plex Sans, both under the SIL Open Font License) |
 
+## Editing
+
+See **EDITING.md** for step-by-step instructions. The `.html` files are the master copy: edit them directly.
+
 ## Updating the track record
 
 Open `assets/js/performance-data.js`, add the new month to `months`, add one value to each series,
