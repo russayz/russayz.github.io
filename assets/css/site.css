@@ -456,3 +456,19 @@ tbody tr:last-child td { border-bottom: 0; }
 .record-risk div { justify-content: flex-end; }
 .record-risk dt { white-space: nowrap; }
 @media (min-width: 901px) and (max-width: 1180px) { .record-risk dt { font-size: 12px; } }
+
+/* about me: write-up with photos */
+.about-me { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+.about-me-text p { font-size: 18px; line-height: 1.65; color: var(--ink-2); }
+.about-me-text p:first-of-type { color: var(--ink); }
+.about-me-text h2 + p { margin-top: 18px; }
+.about-photos { display: grid; gap: 18px; }
+.about-photos figure { margin: 0; }
+.about-photos img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px; border: 1px solid var(--rule); background: var(--surface); }
+.about-photos figcaption { margin-top: 8px; font-size: 13px; color: var(--ink-3); }
+.about-me-page { margin-bottom: clamp(48px, 7vw, 80px); }
+@media (max-width: 860px) {
+  .about-me { grid-template-columns: 1fr; }
+  .about-photos { grid-template-columns: 1fr 1fr; gap: 12px; }
+}
+@media (max-width: 480px) { .about-photos { grid-template-columns: 1fr; } }
