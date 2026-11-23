@@ -1,0 +1,3 @@
+# Pages carry a noindex tag. The pitch decks below are kept out of search crawlers.
+User-agent: *
+Disallow: /files/
