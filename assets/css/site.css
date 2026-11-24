@@ -480,3 +480,7 @@ tbody tr:last-child td { border-bottom: 0; }
 }
 
 @media (max-width: 560px) { .brand-mark { height: 39px; } }
+
+/* hero: name centred over the text block below it */
+.hero-name { max-width: 440px; text-align: center; }
+.hero-lede { max-width: 440px; }
