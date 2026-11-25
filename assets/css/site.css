@@ -436,7 +436,7 @@ tbody tr:last-child td { border-bottom: 0; }
 .hero + .section { padding-top: clamp(36px, 5vw, 56px); border-top: 1px solid var(--rule); }
 
 /* review pass additions */
-.record-risk { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 16px 0 0; border-top: 1px solid var(--rule); }
+.record-risk { display: grid; grid-template-columns: repeat(4, auto); gap: 0; margin: 16px 0 0; border-top: 1px solid var(--rule); }
 .record-risk div { display: flex; flex-direction: column-reverse; padding: 12px 12px 0 0; }
 .record-risk div + div { padding-left: 12px; border-left: 1px solid var(--rule); }
 .record-risk dt { font-size: 13px; color: var(--ink-3); }
@@ -457,6 +457,11 @@ tbody tr:last-child td { border-bottom: 0; }
 .record-risk div { justify-content: flex-end; }
 .record-risk dt { white-space: nowrap; }
 @media (min-width: 901px) and (max-width: 1180px) { .record-risk dt { font-size: 12px; } }
+@media (min-width: 901px) and (max-width: 959px) {
+  .record-risk { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .record-risk div:nth-child(3) { padding-left: 0; border-left: 0; }
+}
+.record-sub span { white-space: nowrap; }
 
 /* about me: write-up with small photos at the side */
 .about-me { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: clamp(28px, 5vw, 72px); align-items: start; }
