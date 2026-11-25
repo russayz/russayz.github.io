@@ -22,9 +22,10 @@
 <link rel="icon" href="/assets/img/favicon.svg?v=2" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/newsreader-latin-opsz.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=20261125i">
+<link rel="stylesheet" href="/assets/css/site.css?v=20261125k">
 <script src="/assets/js/performance-data.js" defer></script>
 <script src="/assets/js/charts.js" defer></script>
+<script src="/assets/js/heatmap.js?v=1" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -62,6 +63,16 @@
         <summary>Show the data as a table</summary>
         <div class="table-scroll" data-table-for="full-chart" data-series="portfolio,spx,vt,efa"></div>
       </details>
+    </div>
+  </section>
+
+  <!-- ===== MONTHLY RETURNS HEATMAP: builds itself from assets/js/performance-data.js, nothing to edit here ===== -->
+  <section class="pitch-section" aria-labelledby="hm-h" style="border-top: 0; padding-top: 0">
+    <div class="chart-card">
+      <p class="chart-title" id="hm-h"><b>Monthly returns</b>Time-weighted, in percent</p>
+      <div class="heatmap-scroll" data-heatmap></div>
+      <noscript><p class="small">The heatmap needs JavaScript. The table under the chart above has every month-end value.</p></noscript>
+      <p class="hm-note">Each month’s return is derived from the month-end cumulative returns in the chart above. Green marks a gain and red a loss; deeper color means a larger move. “Year” compounds the months shown: 2024 starts at inception on 27 May, and the current year is year to date.</p>
     </div>
   </section>
 

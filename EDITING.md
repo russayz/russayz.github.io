@@ -38,6 +38,7 @@ Open the folder on github.com (for example `files`), click **Add file > Upload f
 | DISCO pitch page | `research/disco/index.html` |
 | My Portfolio page: stats, contributors, notes (the web address stays /track-record/) | `track-record/index.html` |
 | Chart numbers (portfolio and benchmarks) | `assets/js/performance-data.js` |
+| Monthly returns heatmap on My Portfolio | Builds itself from `assets/js/performance-data.js`. Nothing to edit. |
 | About page: experience, education, competitions, contact | `about/index.html` |
 | Pitch decks | `files/` |
 | Slide images and the link-preview image | `assets/img/` |
@@ -75,6 +76,7 @@ Do all three steps so the numbers agree everywhere.
   - New cumulative = (1 + old cumulative ÷ 100) × (1 + month's return ÷ 100) − 1, then × 100.
   - Example: old 84.64, November +2.0% → 1.8464 × 1.02 − 1 = 0.8833 → **88.33**.
 - Update `asOf` and the `reported` figures.
+- The monthly returns heatmap on My Portfolio updates by itself from these numbers, including the new month's cell and the year total.
 
 **b. Home page: `index.html`**, in the MY PORTFOLIO PANEL block
 - The big number, "May 2024 to Oct 2026", the two legend values, the four stats (annualized return, max drawdown, Sharpe, Sortino), and the sentence inside `<noscript>`.
