@@ -51,6 +51,7 @@ Visitors never see them.
 ## Rules that keep the page from breaking
 
 - Change the words **between** tags, for example `<p>change this text</p>`. Do not delete `<`, `>`, quote marks or closing tags like `</p>`.
+- To bold words, wrap them in `<strong>` and `</strong>`, for example `<strong>Violet Quaker</strong>`.
 - Write `&amp;` where you want an ampersand: `S&amp;P 500` shows as "S&P 500".
 - For negative numbers, a normal hyphen works (`-3.2%`). The site uses the true minus sign (−), which you can copy from any page.
 - The header and footer are repeated on every page. To change something in them (such as your email), use github.dev's search (method B) and change every copy.
