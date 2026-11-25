@@ -77,7 +77,7 @@ Do all three steps so the numbers agree everywhere.
 - Update `asOf` and the `reported` figures.
 
 **b. Home page: `index.html`**, in the MY PORTFOLIO PANEL block
-- The big number, "May 2024 to Oct 2026", the two legend values, the four risk stats (Sharpe, Sortino, max drawdown, best month), and the sentence inside `<noscript>`.
+- The big number, "May 2024 to Oct 2026", the two legend values, the four stats (annualized return, max drawdown, Sharpe, Sortino), and the sentence inside `<noscript>`.
 
 **c. My Portfolio page: `track-record/index.html`**
 - The opening paragraph (return and lead over the S&P 500), the eight STATS (including Sortino ratio and average holding duration), the chart subtitle ("Month-end values, May 2024 to ..."), the contributors if they changed, and the notes at the bottom.
