@@ -13,9 +13,15 @@
   var CAP = 6; // a move of 6% or more gets the deepest color
 
   function fmt(v) {
-    var r = Math.round(v * 10) / 10;
-    if (r === 0) return "0.0";
-    return (r < 0 ? MINUS : "") + Math.abs(r).toFixed(1);
+    var r = Math.round(v * 100) / 100;
+    if (r === 0) return "0.00";
+    return (r < 0 ? MINUS : "+") + Math.abs(r).toFixed(2);
+  }
+  function spacer(tag) {
+    var c = document.createElement(tag);
+    c.className = "hm-gap";
+    c.setAttribute("aria-hidden", "true");
+    return c;
   }
 
   function build(root) {
@@ -36,6 +42,17 @@
       if (!byYear[y]) { byYear[y] = { months: {}, growth: 1 }; years.push(y); }
       byYear[y].months[m] = ret;
       byYear[y].growth *= 1 + ret / 100;
+    });
+
+    // Where the broker report states a single month exactly (last, best, worst month),
+    // show that figure so the grid agrees with the stats panel to the second decimal.
+    var rep = DATA.reported || {};
+    ["lastMonth", "bestMonth", "worstMonth"].forEach(function (k) {
+      var r = rep[k];
+      var p = r && /^([A-Z][a-z]{2}) (\d{4})$/.exec(r.period || "");
+      if (!p) return;
+      var m = MONTHS.indexOf(p[1]);
+      if (m !== -1 && byYear[p[2]] && byYear[p[2]].months.hasOwnProperty(m)) byYear[p[2]].months[m] = r.value;
     });
 
     var table = document.createElement("table");
@@ -59,10 +76,12 @@
       th.textContent = m;
       hr.appendChild(th);
     });
+    hr.appendChild(spacer("td"));
     var yh = document.createElement("th");
     yh.scope = "col";
     yh.className = "hm-year";
-    yh.textContent = "Year";
+    yh.abbr = "Year to date";
+    yh.textContent = "YTD";
     hr.appendChild(yh);
     thead.appendChild(hr);
     table.appendChild(thead);
@@ -90,9 +109,11 @@
         }
         tr.appendChild(td);
       }
+      tr.appendChild(spacer("td"));
       var yt = document.createElement("td");
-      yt.className = "hm-year";
       var total = (row.growth - 1) * 100;
+      yt.className = "hm-year " + (total < 0 ? "is-neg" : "is-pos");
+      yt.style.setProperty("--a", "0.5");
       yt.textContent = fmt(total);
       yt.title = y + ": " + fmt(total) + "%";
       tr.appendChild(yt);
