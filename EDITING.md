@@ -79,7 +79,7 @@ Do all three steps so the numbers agree everywhere.
 - The big number, "May 2024 to Oct 2026", the two legend values, the four risk stats (Sharpe, Sortino, max drawdown, best month), and the sentence inside `<noscript>`.
 
 **c. My Portfolio page: `track-record/index.html`**
-- The opening paragraph (return and lead over the S&P 500), the ten STATS (including Sortino ratio and average holding duration), the chart subtitle ("Month-end values, May 2024 to ..."), the contributors if they changed, and the notes at the bottom.
+- The opening paragraph (return and lead over the S&P 500), the eight STATS (including Sortino ratio and average holding duration), the chart subtitle ("Month-end values, May 2024 to ..."), the contributors if they changed, and the notes at the bottom.
 - Contributor bars: each `width: 100.0%` is that holding's contribution divided by the largest contribution on the page, times 100. For example 7.13 ÷ 8.28 × 100 = 86.1%.
 
 Never add account values or dollar balances. The site shows percentages only.
