@@ -81,6 +81,7 @@ Do all three steps so the numbers agree everywhere.
 
 **c. My Portfolio page: `track-record/index.html`**
 - The opening paragraph (return and lead over the S&P 500), the eight STATS (including Sortino ratio and average holding duration), the chart subtitle ("Month-end values, May 2024 to ..."), the contributors if they changed, and the notes at the bottom.
+- Annualized return: (1 + cumulative return ÷ 100) ^ (365 ÷ days since 27 May 2024) − 1, then × 100. Example for October: 1.8464 ^ (365 ÷ 885) − 1 = **28.80%**. A spreadsheet works: `=(1+84.64/100)^(365/885)-1`.
 - Contributor bars: each `width: 100.0%` is that holding's contribution divided by the largest contribution on the page, times 100. For example 7.13 ÷ 8.28 × 100 = 86.1%.
 
 Never add account values or dollar balances. The site shows percentages only.
